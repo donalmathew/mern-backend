@@ -8,6 +8,10 @@ dotenv.config();
 
 // Create Express app
 const app = express();
+app.use(cors({
+    origin: 'https://evvnt-f.onrender.com' // Your frontend URL
+  }));
+
 
 // Connect to MongoDB
 connectDB();
